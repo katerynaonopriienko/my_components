@@ -56,8 +56,8 @@ function checkSpam2(text) {
 console.log( checkSpam2('Вышел заяц на крыльно навалить свое дерьмецо') );
 
 // Функция создаст объект из 2 массивов
-// var a = ['name', 'age', 'position'];
-// var b = ['Kate', '28', 'Front-end developer']
+var a = ['name', 'age', 'position'],
+    b = ['Kate', '28', 'Front-end developer'];
 // вернет
 // {
 //     name: 'Kate',
@@ -65,8 +65,14 @@ console.log( checkSpam2('Вышел заяц на крыльно навалит�
 //     position: 'Front-end developer'
 // }
 function createModel(arr1, arr2) {
-
+    var obj = {};
+    for ( var i = 0; i < arr1.length; i++ ) {
+        obj[arr1[i]] = arr2[i];
+    }
+    return obj;
 }
+
+console.log(createModel(a, b));
 
 /*
  * Задча:
@@ -81,24 +87,26 @@ function createModel(arr1, arr2) {
  * formPrice('$100') => 100
  */
 
-// function formPrice(price) {
-// for (i=0; i<cart.length; i++) {
-// 	if (typeof(cart[i].price) === 'string') {
-// 		if (cart[i].price.indexOf('$') !== -1) {
-// 			cart[i].price = parseFloat(cart[i].price.replace('$',''));
-// 		} else {
-// 			cart[i].price = parseFloat(cart[i].price);
-// 		}
-// 	}
-// console.log(cart[i]);
-// }
-// }
+function formPrice( price ) {
+    var a = price;
+    if ( typeof a === 'string' ) {
+         if ( a.indexOf('$') !== -1 ) {
+             a = parseFloat(a.replace('$',''));
+         } else {
+             a = parseFloat(a);
+         }
+         return a
+    } else {
+        return parseFloat(a);
+    }
+}
 
+console.log(formPrice('$100') );
 
 var cart = [
     { id: 1, price: '100', name: 'Product 1' },
     { id: 2, price: '220', name: 'Product 2' },
-    { id: 3, price: '330', name: 'Product 3' },
+    { id: 3, price: '530', name: 'Product 3' },
     { id: 4, price: '30',  name: 'Product 4' },
     { id: 5, price: '530', name: 'Product 5' }
 ];
@@ -110,18 +118,15 @@ var cart = [
  * calcSumItmes(items);
  */
 
-// function calcSumItems(cart) {
-// 	var summ = 0;
-// 	cart.map(function(item, index, array) {
-// 		summ += parseFloat(item.price);
-// 		// console.log(summ);
-// 	});
-// 	return summ;
-// }
+function cartSum(ar) {
+    var sum = 0;
+    ar.map(function(item, index, ar) {
+        sum += parseFloat( item.price);
+    });
+    return sum;
+}
 
-// calcSumItems(cart);
-// console.log(calcSumItems(cart));
-
+console.log( cartSum(cart) );
 
 /*
  * Задача:
@@ -130,6 +135,31 @@ var cart = [
  * findPriceProduct(name);
  */
 
+function findPriceProduct(name) {
+    newPrice = 0;
+    var ar = cart;
+    if ( ar.length > 0 ) {
+        ar.filter(function(item, index, ar) {
+            if ( item.name === name ) {
+                return newPrice =  parseFloat(item.price);
+            }
+        });
+    }
+    return newPrice;
+}
+
+console.log(findPriceProduct('Product 1'));
+
+function findPriceProduct2(name) {
+    for (var i = 0, max = cart.length; i < max; i++) {
+        if (cart[i].name === name) {
+            return parseFloat(cart[i].price);
+        }
+    }
+    alert( 'нет такого имени' );
+}
+
+console.log(findPriceProduct2('Product 5'));
 /*
  * Задача:
  * Удалить товар из корзины по Id, если такого Id нет сообщить об этом в консоле
