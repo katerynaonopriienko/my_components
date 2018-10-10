@@ -166,7 +166,7 @@ console.log(findPriceProduct2('Product 5'));
  * Пример:
  * removeProduct(productId);
  */
-
+function removeProduct(productId)();
 
 // * Задача:
 // * Найти товары, которые стоят до 300
