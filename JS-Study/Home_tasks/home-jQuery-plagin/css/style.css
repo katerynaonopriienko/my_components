@@ -1,0 +1,96 @@
+.gallery {
+	position: relative;
+	overflow: hidden;
+	height: 450px;
+	margin: 0 0 2em;
+}
+
+.slide {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+li.active {
+	color: red
+}
+
+.pagination {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 250px;
+	text-align: center;
+}
+
+.pagination li{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
+	font-size: 0;
+	line-height: 0;
+	border-radius: 50%;
+	background: gray;
+	border: 2px solid transparent;
+	transition: background .4s;
+	cursor: pointer;
+}
+
+.pagination li.active {
+	border-color: gray;
+	background: transparent;
+}
+
+.actions-btn {
+	position: absolute;
+	left: 0;
+	bottom: 15px;
+	z-index: 1;
+}
+
+.blocks-wrap {
+	overflow: hidden;
+}
+
+.opener {
+	text-decoration: none;
+	padding: 10px 10px;
+	background: #9e8989;
+	margin: 0 0 10px;
+	display: block;
+}
+
+.slider {
+	background: #aed6d6;
+}
+
+.block {
+	overflow: hidden;
+	float : left;
+	width: 40%;
+	margin: 0 2% .5em 0;
+}
+.block.active .slider {
+	display: block;
+}
+.block.active .opener{
+	color: red;
+}
+
+.descr {
+	padding: 15px;
+	background: gray;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}

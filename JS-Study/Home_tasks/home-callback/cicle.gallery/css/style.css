@@ -1,0 +1,50 @@
+/* carousel basic styles */
+
+.cycle-gallery {
+    position: relative;
+}
+
+.cycle-gallery .mask {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.cycle-gallery .slideset {
+  /*   float: left; */
+  white-space: nowrap;
+}
+
+.cycle-gallery .slide {
+    width: 1024px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cycle-gallery .slide img {
+	width: 100%;
+	display: block;
+}
+
+.video-holder {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* padding-bottom: 47.25%; */
+    padding-top: 25px;
+    height: 0 !important;
+    width: 100% !important;
+    max-width: 842px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.video-holder video,
+.video-holder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

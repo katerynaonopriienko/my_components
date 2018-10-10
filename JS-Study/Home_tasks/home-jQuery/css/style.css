@@ -1,0 +1,149 @@
+.gallery {
+	position: relative;
+	overflow: hidden;
+	height: 400px;
+	margin: 0 0 2em;
+}
+
+.slide {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* display: none; */
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	/*opacity: 0;*/
+	/*transition: opacity .4s;*/
+}
+
+/*.slide.active {
+	opacity: 1;
+}*/
+li.active {
+	color: red
+}
+
+.pagination {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 250px;
+	text-align: center;
+}
+
+.pagination li{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
+	font-size: 0;
+	line-height: 0;
+	border-radius: 50%;
+	background: red;
+	border: 2px solid transparent;
+	transition: background .4;
+	cursor: pointer;
+}
+
+.pagination li.active {
+	border-color: red;
+	background: transparent;
+}
+
+.actions-btn {
+	position: absolute;
+	left: 0;
+	bottom: 15px;
+	z-index: 1;
+}
+
+.blocks-wrap {
+	overflow: hidden;
+}
+.block .slide {
+	display: none;
+}
+.block {
+	float : left;
+	width: 40%;
+	border: 1px solid black;
+	margin: 0 2% .5em 0;
+}
+.block .opener {
+	display: block;
+}
+.block.active .slide {
+	display: block;
+}
+.block.active .opener{
+	color: red;
+}
+
+.box-holder {
+	padding-bottom: 30px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 30px;
+}
+
+.form-block form{
+	margin-bottom: 30px;
+}
+
+.error{
+	color: red;
+	border: 1px solid red;
+}
+ul {
+	margin: 0 0 .5em 0;
+}
+ul:nth-child(even) {
+	color: blue;
+}
+ul li,
+label{
+	cursor: pointer;
+}
+
+.first-list li{
+	display: block;
+}
+/*.blocks-wrap {
+	overflow: hidden;
+}
+.slide {
+	display: none;
+}
+.block {
+	float : left;
+	width: 40%;
+	border: 1px solid black;
+	margin: 0 2% .5em 0;
+}
+.block .opener {
+	display: block;
+}
+.block.active .slide {
+	display: block;
+}
+.block.active .opener{
+	color: red;
+}*/
+
+.checkbox-holder label{
+	text-transform: uppercase;
+}
+
+.year-saving {
+	color: orange;
+}
+
+.days-savings {
+	color: blue;
+}
