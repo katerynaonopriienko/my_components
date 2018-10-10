@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <link media="all" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <form action="fake.html" method="GET" data-block="content">
+            <fieldset>
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="color" placeholder="Color">
+                <input type="radio" name="size" value="12">
+                <input type="radio" name="size" value="20">
+                <button>Send</button>
+            </fieldset>
+        </form>
+        <div data-block="content"></div>
+
+        <ul>
+            <li><a href="fake.html">All</a></li>
+            <li><a href="fake.html">Cars</a></li>
+            <li><a href="fake.html">Airs</a></li>
+        </ul>
+        <div data-block="ajax"></div>
+
+        <div data-block="ajax-json" data-path="file.json"></div>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.main.js"></script>
+    <script type="text/html" id="item_tmpl">
+        <% for ( var i = 0; i < data.products.length; i++ ) { %>
+            <div><%= data.products[i].name %></div>
+        <% } %>
+    </script>
+</body>
+</html>

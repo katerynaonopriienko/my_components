@@ -1,0 +1,123 @@
+body {
+    font: 12px/16px Verdana;
+    margin: 0;
+}
+
+#wrapper {
+    padding: 20px;
+    position: relative;
+}
+
+section {
+    border: 1px dashed #999;
+    margin: 0 0 15px;
+    padding: 15px;
+}
+
+section h2 {
+    font: 16px/20px Verdana;
+    margin: 0 0 10px;
+}
+
+section a {
+    color: #000;
+    text-decoration: none;
+}
+
+section a:hover {
+    color: #ccc;
+}
+
+.menu {
+
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+
+}
+
+.box {
+    border: 2px solid green;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    height: 100px;
+    width:  100px;
+}
+
+.box span {
+    width: 100%;
+}
+
+.accordion {
+
+}
+
+.accordion .item {
+    margin: 0 0 -1px;
+}
+
+
+
+.accordion .slide {
+    overflow: hidden;
+}
+
+.accordion .opener,
+.open-close .opener {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.accordion .opener:hover,
+.open-close .opener:hover {
+    border: 1px solid #000;
+    background: #ccc;
+    color: #000;
+}
+.accordion .item.active .opener {
+    border: 1px solid #000;
+    background: #ccc;
+    color: #000;
+}
+
+.accordion .slider,
+.open-close .slider {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+}
+
+
+.block-tank {
+    border: 1px solid #ccc;
+    position: relative;
+    height: 200px;
+    width: 600px;
+    margin: 0 0 10px;
+}
+
+.block-tank:hover {
+    border-color: #f00;
+}
+
+.tank {
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+}

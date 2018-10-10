@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>taskS</title>
+	<style>
+		.error{
+			color: red;
+			border: 1px solid red;
+		}
+		ul {
+			margin: 0 0 .5em 0;
+		}
+		ul:nth-child(even) {
+			color: blue;
+		}
+		ul li,
+		label{
+			cursor: pointer;
+		}
+		.blocks-wrap {
+			overflow: hidden;
+		}
+		.slide {
+			display: none;
+		}
+		.block {
+			float : left;
+			width: 40%;
+			border: 1px solid black;
+			margin: 0 2% .5em 0;
+		}
+		.block .opener {
+			display: block;
+		}
+		.block.active .slide {
+			display: block;
+		}
+		.block.active .opener{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" id="form">
+		<input type="text" class="input" placeholder="Enter number 1">
+		<input type="text" class="input" placeholder="Enter number 2">
+		<select>
+			<option>Please select method</option>
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+		</select>
+		<button class="button">calc</button>
+	</form>
+	<div class="result">Result: </div>
+	<div class="addArray">addArray: </div>
+	<ul class="first-list"></ul>
+	<ul class="list"></ul>
+	<div class="showArray"></div>
+	<div class="blocks-wrap">
+		<div class="block">
+			<a href="#" class="opener">open</a>
+			<div class="slide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium ab labore saepe delectus hic porro, molestias aspernatur aliquam, eaque libero, mollitia dolor! Odit at aliquid voluptatem nostrum explicabo iusto.</div>
+		</div>
+		<div class="block">
+			<a href="#" class="opener">open</a>
+			<div class="slide">tra-ta-ta</div>
+		</div>
+	</div>
+	<label>
+		<input type="radio" data-price="10$">
+			Light Package
+	</label>
+	<label>
+		<input type="radio" data-price="20$">
+		Pro Package
+	</label>
+
+
+	<div class="product">
+		<h2 class="title">Service</h2>
+		<div class="price"></div>
+	</div>
+	<script src="tasks.js"></script> 
+</body>
+</html>
