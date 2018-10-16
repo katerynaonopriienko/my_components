@@ -208,3 +208,17 @@ function positiveSum(arr) {
 // Test.assertEquals(positiveSum([-1,2,3,4,-5]),9);
 
 console.log(positiveSum([1,2,3,4,5]));
+
+function stringCap(str) {
+    for ( var i = 0; i < str.length; i++ ) {
+        String.prototype.capitalize = function() {
+            // var this = str[i];
+            return this.charAt(0).toUpperCase() + this.slice(1);
+        };
+        // str[i].charAt(0).toUpperCase() + this.slice(1).toLowerCase();
+        // console.log(str[i])
+    }
+    return str;
+}
+
+console.log(stringCap("How can mirrors be real if our eyes aren't real"))
